@@ -20,4 +20,4 @@ spec:
             mountPath: /mnt
       volumes:
        - name: empty-ctx-vol
-         emptyDir: {}
+         mount: /nfs/client
