@@ -1,0 +1,14 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: helloworld-cron
+spec:
+  schedule: "* * * * *"
+  jobTemplate:
+    spec:
+     template:
+      spec:
+       containers:
+       - name: nginx
+         image: nginx
+       restartPolicy: Never
