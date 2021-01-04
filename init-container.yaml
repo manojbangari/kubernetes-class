@@ -5,7 +5,7 @@ metadata:
     run: nginx
   name: nginx-deploy
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       run: nginx
@@ -24,7 +24,7 @@ spec:
         - name: shared-volume
           mountPath: /nginx-data
         command: ["/bin/sh"]
-        args: ["-c", "echo '<h1>Hello Kubernetes</h1>' > /nginx-data/index.html"]
+        args: ["-c", "echo '<h1>Hello I am kubernetes!!!!!!!!!!!!!</h1>' > /nginx-data/index.html"]
       containers:
       - image: nginx
         name: nginx
