@@ -1,30 +1,3 @@
-QoS Class:       Burstable
-Node-Selectors:  <none>
-Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
-                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
-Events:
-  Type     Reason     Age                    From     Message
-  ----     ------     ----                   ----     -------
-  Normal   BackOff    31m (x750 over 3h31m)  kubelet  Back-off pulling image "nginx12"
-  Warning  Failed     21m (x794 over 3h31m)  kubelet  Error: ImagePullBackOff
-  Warning  Unhealthy  16m (x10 over 171m)    kubelet  Readiness probe failed: Get "http://10.42.0.18:15021/healthz/ready": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
-    Name:        istio-ca-root-cert
-    Optional:    false
-QoS Class:       Burstable
-Node-Selectors:  <none>
-Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
-                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
-Events:
-  Type    Reason     Age   From               Message
-  ----    ------     ----  ----               -------
-  Normal  Scheduled  17m   default-scheduler  Successfully assigned default/nginx1 to worker1
-  Normal   Created    22m                 kubelet            Created container istio-proxy
-  Normal   Started    22m                 kubelet            Started container istio-proxy
-  Normal   Pulled     22m                 kubelet            Successfully pulled image "docker.io/istio/proxyv2:1.8.1" in 2.959284633s
-  Normal   Pulled     22m                 kubelet            Successfully pulled image "redis" in 5.270693749s
-  Normal   Started    21m (x3 over 22m)   kubelet            Started container redis
-  Normal   Created    21m (x3 over 22m)   kubelet            Created container redis
-  Normal   Pulled     21m                 kubelet            Successfully pulled image "redis" in 6.545661249s
-  Normal   Pulling    21m (x4 over 22m)   kubelet            Pulling image "redis"
-  Warning  BackOff    17m (x20 over 22m)  kubelet            Back-off restarting failed container
-  Warning  Unhealthy  16m (x10 over 20m)  kubelet            Readiness probe failed: Get "http://10.42.0.19:15021/healthz/ready": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
++++++++++++++
++++++++++++++
++++++++++++++
