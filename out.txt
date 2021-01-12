@@ -1,11 +1,11 @@
 NAME                              READY   STATUS             RESTARTS   AGE
 details-v1-79c697d759-b65n6       2/2     Running            0          10h
-nginx                             1/2     ErrImagePull       0          3h22m
-nginx1                            0/2     Init:0/1           0          7m54s
+nginx                             1/2     ImagePullBackOff   0          3h31m
+nginx1                            0/2     Init:0/1           0          17m
 productpage-v1-65576bb7bf-gpzjv   2/2     Running            0          10h
 ratings-v1-7d99676f7f-f2t86       2/2     Running            0          10h
-redis                             1/2     CrashLoopBackOff   5          13m
+redis                             1/2     CrashLoopBackOff   5          22m
 reviews-v1-987d495c-mcgln         2/2     Running            0          10h
 reviews-v2-6c5bf657cf-67x2c       2/2     Running            0          10h
 reviews-v3-5f7b9f4f77-98k7j       2/2     Running            0          10h
-security-context-demo             2/2     Running            3          3h31m
+security-context-demo             2/2     Running            3          3h40m
