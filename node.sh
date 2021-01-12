@@ -1,8 +1,10 @@
 
-kubectl get nodes | awk '{print $2}' | grep -i not > not.txt
+not=`kubectl get nodes | awk '{print $2}' | grep -i not| tail -1 `
 
 
-if [ -e  not.txt== Not ];
+echo $not
+
+if [[ $not == "NotReady" ]];
 
 then 
 
@@ -11,9 +13,6 @@ echo "present"
 else
 
 echo "absent"
-
-
-
 
 
 
