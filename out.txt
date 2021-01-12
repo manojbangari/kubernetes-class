@@ -1,6 +1,6 @@
 NAME                              READY   STATUS             RESTARTS   AGE
 details-v1-79c697d759-b65n6       2/2     Running            0          9h
-nginx                             1/2     ImagePullBackOff   0          161m
+nginx                             1/2     ImagePullBackOff   0          162m
 productpage-v1-65576bb7bf-gpzjv   2/2     Running            0          9h
 ratings-v1-7d99676f7f-f2t86       2/2     Running            0          9h
 reviews-v1-987d495c-mcgln         2/2     Running            0          9h

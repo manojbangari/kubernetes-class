@@ -12,7 +12,7 @@ echo $pod
 
 kubectl get pods > out.txt
 
-echo -e "Alert $pod is down\n\n\n .. $out " | mail -a out.txt  -s "Alert Production" manojbangari39@gmail.com
+echo -e "Alert $pod is down\n\n\n .. $out " | mail -a out.txt  -s "Alert Production" manojbangari2721@gmail.com
 
 
 
