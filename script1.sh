@@ -4,15 +4,15 @@
 
 echo "*************************"
 
-pod=`kubectl get pods  |  grep -iv "running" | awk '{print $1}'| tail -n +3`
+kubectl get pods  |  grep -iv "running" | awk '{print $1}'| tail -n +2 > podstatus.txt
+
+for i in  $(cat podstatus.txt); do kubectl describe pod $i | tail -10 | echo "*************$i************" >> describe.out ;done 
 
 
+kubectl get pods > out.txt
 
-echo $pod
 
-#kubectl get pods > out.txt
-
-#echo -e "Alert $pod is down\n\n\n .. $out " | mail -a out.txt  -s "Alert Production" manojbangari2721@gmail.com
+echo -e "Alert $pod is down\n\n\n ..  " | mail -a out.txt -a describe.out  -s "Alert Production" manojbangari39@gmail.com
 
 
 
