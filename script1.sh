@@ -9,7 +9,7 @@ kubectl get pods  |  grep -iv "running" | awk '{print $1}'| tail -n +2 > podstat
 
 count=`cat podstatus.txt| wc -l `
 
-for i in  $(cat podstatus.txt); do kubectl describe pod $i | tail -10  >> describe.out ;done 
+for i in  $(cat podstatus.txt); do kubectl describe pod $i   >> describe.out ;done 
 
 kubectl get pods > out.txt
 

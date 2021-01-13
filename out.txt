@@ -1,11 +1,5 @@
-NAME                              READY   STATUS             RESTARTS   AGE
-details-v1-79c697d759-b65n6       1/2     Running            2          23h
-nginx                             0/2     ImagePullBackOff   1          17h
-nginx1                            0/2     ImagePullBackOff   1          13h
-productpage-v1-65576bb7bf-gpzjv   1/2     Running            2          23h
-ratings-v1-7d99676f7f-f2t86       1/2     Running            2          23h
-redis                             0/2     CrashLoopBackOff   27         14h
-reviews-v1-987d495c-mcgln         1/2     Running            2          23h
-reviews-v2-6c5bf657cf-67x2c       1/2     Running            3          23h
-reviews-v3-5f7b9f4f77-98k7j       1/2     Running            3          23h
-security-context-demo             1/2     Running            6          17h
+NAME                    READY   STATUS             RESTARTS   AGE
+nginx                   0/2     ImagePullBackOff   1          17h
+nginx1                  0/2     ImagePullBackOff   1          14h
+redis                   0/2     CrashLoopBackOff   35         14h
+security-context-demo   1/2     Running            6          17h
