@@ -1,0 +1,30 @@
+  Normal   Created         7m22s                   kubelet  Created container istio-init
+  Normal   Started         7m21s                   kubelet  Started container istio-init
+  Warning  Failed          6m3s                    kubelet  Failed to pull image "redis1": rpc error: code = Unknown desc = Error response from daemon: repository redis1 not found: does not exist or no pull access
+  Warning  Failed          6m3s                    kubelet  Error: ErrImagePull
+  Normal   Pulling         6m3s                    kubelet  Pulling image "docker.io/istio/proxyv2:1.8.1"
+  Normal   Pulled          5m44s                   kubelet  Successfully pulled image "docker.io/istio/proxyv2:1.8.1" in 18.667787143s
+  Normal   Created         5m44s                   kubelet  Created container istio-proxy
+  Normal   Pulling         5m42s (x2 over 7m9s)    kubelet  Pulling image "redis1"
+  Normal   Started         5m42s                   kubelet  Started container istio-proxy
+  Warning  Unhealthy       4m14s (x45 over 5m41s)  kubelet  Readiness probe failed: Get "http://10.42.0.4:15021/healthz/ready": dial tcp 10.42.0.4:15021: connect: connection refused
+  Normal   Created         7m44s                  kubelet  Created container istio-init
+  Normal   Started         7m37s                  kubelet  Started container istio-init
+  Warning  Failed          6m13s                  kubelet  Failed to pull image "redis1": rpc error: code = Unknown desc = Error response from daemon: repository redis1 not found: does not exist or no pull access
+  Warning  Failed          6m13s                  kubelet  Error: ErrImagePull
+  Normal   Pulling         6m13s                  kubelet  Pulling image "docker.io/istio/proxyv2:1.8.1"
+  Normal   Pulled          5m48s                  kubelet  Successfully pulled image "docker.io/istio/proxyv2:1.8.1" in 25.172927957s
+  Normal   Started         5m47s                  kubelet  Started container istio-proxy
+  Normal   Created         5m47s                  kubelet  Created container istio-proxy
+  Warning  Unhealthy       5m37s (x5 over 5m45s)  kubelet  Readiness probe failed: Get "http://10.42.0.12:15021/healthz/ready": dial tcp 10.42.0.12:15021: connect: connection refused
+  Normal   Pulling         4m14s (x4 over 7m16s)  kubelet  Pulling image "redis1"
+  Normal   Started         7m58s                   kubelet  Started container istio-init
+  Normal   Pulled          6m30s                   kubelet  Successfully pulled image "redis" in 51.724583979s
+  Normal   Created         6m30s                   kubelet  Created container redis
+  Normal   Started         6m29s                   kubelet  Started container redis
+  Normal   Pulling         6m29s                   kubelet  Pulling image "docker.io/istio/proxyv2:1.8.1"
+  Normal   Created         5m55s                   kubelet  Created container istio-proxy
+  Normal   Pulled          5m55s                   kubelet  Successfully pulled image "docker.io/istio/proxyv2:1.8.1" in 33.540502654s
+  Normal   Started         5m55s                   kubelet  Started container istio-proxy
+  Normal   Pulling         5m54s (x2 over 7m22s)   kubelet  Pulling image "redis"
+  Warning  Unhealthy       4m15s (x50 over 5m53s)  kubelet  Readiness probe failed: Get "http://10.42.0.14:15021/healthz/ready": dial tcp 10.42.0.14:15021: connect: connection refused
