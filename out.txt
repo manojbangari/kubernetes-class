@@ -1,0 +1,5 @@
+NAME                    READY   STATUS             RESTARTS   AGE
+nginx                   0/2     ImagePullBackOff   1          17h
+nginx1                  0/2     ImagePullBackOff   1          14h
+redis                   0/2     CrashLoopBackOff   35         14h
+security-context-demo   1/2     Running            6          17h
