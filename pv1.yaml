@@ -6,6 +6,7 @@ metadata:
     volume: ssd
   
 spec:
+  storageClassName: hostpath
   capacity:
     storage: 20Mi
   accessModes:

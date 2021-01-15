@@ -3,8 +3,12 @@ kind: PersistentVolumeClaim
 metadata:
   name: my-pvc1
 spec:
+  storageClassName: hostpath
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
       storage: 15Mi
+  selector:
+    matchLabels:
+      volume: hdd
