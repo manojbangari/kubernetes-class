@@ -24,7 +24,7 @@ spec:
          securityContext:
            capabilities:
 #             add:  ["NET_RAW"]
-             add:  ["CHROOT"]
+             add:  ["SYS_ADMIN"]
              drop: ["all"]
       volumes:
        - name: empty-ctx-vol
