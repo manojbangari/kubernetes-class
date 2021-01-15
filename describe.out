@@ -47,9 +47,59 @@ Events:
   Warning  Failed          11h (x4 over 11h)      kubelet            Error: ErrImagePull
   Normal   BackOff         11h (x6 over 11h)      kubelet            Back-off pulling image "nginx123"
   Warning  Failed          11h (x83 over 11h)     kubelet            Error: ImagePullBackOff
-  Normal   SandboxChanged  2m58s (x5 over 3m54s)  kubelet            Pod sandbox changed, it will be killed and re-created.
-  Normal   Pulling         2m12s (x3 over 3m11s)  kubelet            Pulling image "nginx123"
-  Warning  Failed          2m9s (x3 over 2m59s)   kubelet            Failed to pull image "nginx123": rpc error: code = Unknown desc = Error response from daemon: repository nginx123 not found: does not exist or no pull access
-  Warning  Failed          2m9s (x3 over 2m59s)   kubelet            Error: ErrImagePull
-  Normal   BackOff         118s (x5 over 2m57s)   kubelet            Back-off pulling image "nginx123"
-  Warning  Failed          105s (x6 over 2m57s)   kubelet            Error: ImagePullBackOff
+  Normal   SandboxChanged  5m5s (x5 over 6m1s)    kubelet            Pod sandbox changed, it will be killed and re-created.
+  Normal   Pulling         4m19s (x3 over 5m18s)  kubelet            Pulling image "nginx123"
+  Warning  Failed          4m16s (x3 over 5m6s)   kubelet            Failed to pull image "nginx123": rpc error: code = Unknown desc = Error response from daemon: repository nginx123 not found: does not exist or no pull access
+  Warning  Failed          4m16s (x3 over 5m6s)   kubelet            Error: ErrImagePull
+  Normal   BackOff         4m5s (x5 over 5m4s)    kubelet            Back-off pulling image "nginx123"
+  Warning  Failed          60s (x17 over 5m4s)    kubelet            Error: ImagePullBackOff
+Name:         redis
+Namespace:    default
+Priority:     0
+Node:         worker1/192.168.216.231
+Start Time:   Thu, 14 Jan 2021 22:00:53 -0800
+Labels:       run=nginx
+Annotations:  <none>
+Status:       Pending
+IP:           10.42.0.4
+IPs:
+  IP:  10.42.0.4
+Containers:
+  nginx:
+    Container ID:   
+    Image:          redisa
+    Image ID:       
+    Port:           <none>
+    Host Port:      <none>
+    State:          Waiting
+      Reason:       ImagePullBackOff
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-bn7jj (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-bn7jj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-bn7jj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason          Age                From               Message
+  ----     ------          ----               ----               -------
+  Normal   Scheduled       60s                default-scheduler  Successfully assigned default/redis to worker1
+  Normal   SandboxChanged  55s                kubelet            Pod sandbox changed, it will be killed and re-created.
+  Normal   BackOff         25s (x4 over 54s)  kubelet            Back-off pulling image "redisa"
+  Warning  Failed          25s (x4 over 54s)  kubelet            Error: ImagePullBackOff
+  Normal   Pulling         10s (x3 over 59s)  kubelet            Pulling image "redisa"
+  Warning  Failed          7s (x3 over 56s)   kubelet            Failed to pull image "redisa": rpc error: code = Unknown desc = Error response from daemon: repository redisa not found: does not exist or no pull access
+  Warning  Failed          7s (x3 over 56s)   kubelet            Error: ErrImagePull
