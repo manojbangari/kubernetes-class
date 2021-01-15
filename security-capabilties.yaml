@@ -23,7 +23,8 @@ spec:
             mountPath: /mnt
          securityContext:
            capabilities:
-             add:  ["NET_RAW"]
+#             add:  ["NET_RAW"]
+             add:  ["CHROOT"]
              drop: ["all"]
       volumes:
        - name: empty-ctx-vol
