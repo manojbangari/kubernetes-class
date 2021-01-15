@@ -1,4 +1,4 @@
 NAME                    READY   STATUS             RESTARTS   AGE
-nginx                   0/1     ImagePullBackOff   0          5m37s
-security-context-demo   1/1     Running            11         11d
-task-pv-pod             1/1     Running            0          4h21m
+nginx                   0/1     ImagePullBackOff   0          11h
+security-context-demo   1/1     Running            12         11d
+task-pv-pod             1/1     Running            1          15h

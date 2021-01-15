@@ -39,11 +39,17 @@ Node-Selectors:  <none>
 Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
                  node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
 Events:
-  Type     Reason     Age                    From               Message
-  ----     ------     ----                   ----               -------
-  Normal   Scheduled  5m36s                  default-scheduler  Successfully assigned default/nginx to worker1
-  Normal   Pulling    3m44s (x4 over 5m36s)  kubelet            Pulling image "nginx123"
-  Warning  Failed     3m41s (x4 over 5m26s)  kubelet            Failed to pull image "nginx123": rpc error: code = Unknown desc = Error response from daemon: repository nginx123 not found: does not exist or no pull access
-  Warning  Failed     3m41s (x4 over 5m26s)  kubelet            Error: ErrImagePull
-  Normal   BackOff    3m27s (x6 over 5m25s)  kubelet            Back-off pulling image "nginx123"
-  Warning  Failed     34s (x18 over 5m25s)   kubelet            Error: ImagePullBackOff
+  Type     Reason          Age                    From               Message
+  ----     ------          ----                   ----               -------
+  Normal   Scheduled       11h                    default-scheduler  Successfully assigned default/nginx to worker1
+  Normal   Pulling         11h (x4 over 11h)      kubelet            Pulling image "nginx123"
+  Warning  Failed          11h (x4 over 11h)      kubelet            Failed to pull image "nginx123": rpc error: code = Unknown desc = Error response from daemon: repository nginx123 not found: does not exist or no pull access
+  Warning  Failed          11h (x4 over 11h)      kubelet            Error: ErrImagePull
+  Normal   BackOff         11h (x6 over 11h)      kubelet            Back-off pulling image "nginx123"
+  Warning  Failed          11h (x83 over 11h)     kubelet            Error: ImagePullBackOff
+  Normal   SandboxChanged  2m58s (x5 over 3m54s)  kubelet            Pod sandbox changed, it will be killed and re-created.
+  Normal   Pulling         2m12s (x3 over 3m11s)  kubelet            Pulling image "nginx123"
+  Warning  Failed          2m9s (x3 over 2m59s)   kubelet            Failed to pull image "nginx123": rpc error: code = Unknown desc = Error response from daemon: repository nginx123 not found: does not exist or no pull access
+  Warning  Failed          2m9s (x3 over 2m59s)   kubelet            Error: ErrImagePull
+  Normal   BackOff         118s (x5 over 2m57s)   kubelet            Back-off pulling image "nginx123"
+  Warning  Failed          105s (x6 over 2m57s)   kubelet            Error: ImagePullBackOff
