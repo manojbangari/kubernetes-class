@@ -12,7 +12,7 @@ spec:
     - ReadWriteOnce
   nfs:
     server: 192.168.216.230
-    path: "/data/pvs/pv0"
+    path: "/nfs/pvs/pv0"
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -28,7 +28,7 @@ spec:
     - ReadWriteOnce
   nfs:
     server: 192.168.216.230
-    path: "/data/pvs/pv1"
+    path: "/nfs/pvs/pv1"
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -44,7 +44,7 @@ spec:
     - ReadWriteOnce
   nfs:
     server: 192.168.216.230
-    path: "/data/pvs/pv2"
+    path: "/nfs/pvs/pv2"
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -60,4 +60,4 @@ spec:
     - ReadWriteOnce
   nfs:
     server: 192.168.216.230
-    path: "/data/pvs/pv3"
+    path: "/nfs/pvs/pv3"
