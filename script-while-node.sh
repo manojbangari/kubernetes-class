@@ -1,10 +1,9 @@
 while true
 do
- check=`/root/yaml/script-node.sh`
- $check 
+ /root/yaml/script-node.sh
  sleep 5
 
-if [ $check == "Error" ]
+if [[ $check == "Error" ]]
 then
 
 break 
