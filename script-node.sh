@@ -4,6 +4,7 @@ nodes=`kubectl get nodes`
 
 echo $not
 
+
 if [[ $not == "NotReady" ]];
 
 then
@@ -16,3 +17,4 @@ else
 echo "absent"
 
 fi
+
