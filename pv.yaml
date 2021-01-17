@@ -4,7 +4,7 @@ metadata:
   name: mypv
 spec:
   storageClassName: hostpath
-  persistentVolumeReclaimPolicy: Delete
+  persistentVolumeReclaimPolicy: Recycle
   capacity:
     storage: 20Mi
   accessModes:
