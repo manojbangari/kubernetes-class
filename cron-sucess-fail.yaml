@@ -13,5 +13,5 @@ spec:
            containers:
            - name: nginx
              image: nginx
-             command: ["echo", "kube_+++++++"]
+             command: ["sh", "/mnasd"]
            restartPolicy: Never
