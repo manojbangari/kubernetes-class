@@ -12,6 +12,6 @@ spec:
           spec:
            containers:
            - name: nginx
-             image: nginx
-             command: ["sh", "/mnasd"]
+             image: nginx2
+             command: ["echo", "mnasd"]
            restartPolicy: Never
