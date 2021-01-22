@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: command-demo
-  labels:
-    purpose: demonstrate-command
+    name: command-demo
+    labels: 
+        purpose: demo-command
 spec:
   containers:
   - name: command-demo-container
-    image: busybox
-    command: ["/bin/echo"]
-    args: ["HIII Docker!!!!!"]
+    image: ubuntu
+    command: ["/bin/sh"]
+    args: ["-c", "while true; do echo hello; sleep 2;done"]
