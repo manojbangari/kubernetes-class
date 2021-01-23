@@ -24,7 +24,7 @@ spec:
         - name: shared-volume
           mountPath: /nginx-data
         command: ["/bin/sh"]
-        args: ["-c", "echo '<h1>Hello I am SHIVA!!!!!!!!!!!!!</h1>' > /nginx-data/index.html"]
+        args: ["-c", "echo '<h1>Hello I am MANOJ!!!!!!!!!!!!!</h1>' > /nginx-data/index.html"]
       containers:
       - image: nginx
         name: nginx
