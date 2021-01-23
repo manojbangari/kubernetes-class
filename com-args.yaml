@@ -9,4 +9,4 @@ spec:
   - name: command-demo-container
     image: ubuntu
     command: ["/bin/sh"]
-    args: ["-c", "while true; do echo hello; sleep 2;done"]
+    args: ["-c", "while true; do echo hello world!!!!!!!!!; sleep 2;done"]
