@@ -5,7 +5,7 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: manual
+  storageClassName: uat
   capacity:
     storage: 200Mi
   accessModes:
@@ -21,7 +21,7 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: manual
+  storageClassName: uat
   capacity:
     storage: 200Mi
   accessModes:
@@ -37,7 +37,7 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: manual
+  storageClassName: uat
   capacity:
     storage: 200Mi
   accessModes:
@@ -53,7 +53,7 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: manual
+  storageClassName: uat
   capacity:
     storage: 200Mi
   accessModes:
