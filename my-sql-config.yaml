@@ -1,18 +1,16 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: my-sql
+  name: mypod
 spec:
-  volumes:
-    - name: task-pv
-      persistentVolumeClaim:
-        claimName: my-pvc
   containers:
-  - image: mysql:5.7
-    name: mysql
-     valueFrom:
-       configMapKeyRef:
-         name: mysql-demo-config
+  - name: mypod
+    image: busybox
     volumeMounts:
-    - name: mysql-config
-      mountPath: /mydata
+    - name: foo
+      mountPath: "/etc/my.cnf"
+      readOnly: true
+  volumes:
+  - name: foo
+    configMap:
+      name: mysql
