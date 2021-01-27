@@ -4,4 +4,4 @@ metadata:
   name: demo-configmap
 data:
   my.name: "kubernetes"
-  new.owner: "FACEBOOK1"
+  new.owner: "FACE"
