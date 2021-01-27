@@ -1,0 +1,73 @@
+mkdir /root/certs
+mkdir /root/auth
+
+When you run below openssl commands, you are prompted to provide additional information. Accept all defaults except the  Common Name. When prompted for Common Name, enter your server hostname
+
+openssl req -newkey rsa:4096 -nodes -sha256 -keyout certs/domain.key -x509 -days 1095 -out certs/ca.crt
+
+cd certs/
+
+cp ca.crt /etc/pki/ca-trust/source/anchors/
+mv /etc/pki/ca-trust/source/anchors/ca.crt /etc/pki/ca-trust/source/anchors/master.com.crt
+update-ca-trust
+
+htpasswd -Bbn registryadmin jkfilms > /root/auth/htpasswd
+
+cd
+
+vi docker-compose.yaml
+
+
+version: '3.0'
+
+services:
+
+  registry:
+    container_name: docker-registry
+    restart: always
+    image: registry:2
+    environment:
+      REGISTRY_HTTP_TLS_CERTIFICATE: /certs/ca.crt
+      REGISTRY_HTTP_TLS_KEY: /certs/domain.key
+      REGISTRY_AUTH: htpasswd
+      REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd
+      REGISTRY_AUTH_HTPASSWD_REALM: Registry Realm
+    ports:
+      - 5000:5000
+    volumes:
+      - /var/lib/registry:/var/lib/registry
+      - ./certs:/certs
+      - ./auth:/auth
+
+
+
+
+docker-compose up -d
+docker-compose ps
+kubectl create secret docker-registry mydockercredentials --docker-server master:5000  --docker-username registryadmin --docker-password  jkfilms
+systemctl restart docker
+docker login
+docker login master:5000
+
+
+ON all Worker nodes
+
+Navigate to the  /etc/docker/certs.d directory.
+
+Create a directory named  hostname:5000. 
+
+mkdir -p /etc/docker/certs.d/master:5000
+
+Copy the ca.crt file master to /etc/docker/certs.d/ directory on all workers. 
+
+
+
+cp /etc/docker/certs.d/ca.crt /etc/pki/ca-trust/source/anchors/master.com.crt 
+
+Rename the ca.crt to master.com.crt 
+
+mv /etc/pki/ca-trust/source/anchors/ca.crt     /etc/pki/ca-trust/source/anchors/master.com.crt
+update-ca-trust
+
+systemctl restart docker
+

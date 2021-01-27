@@ -18,8 +18,7 @@ metadata:
   name: nginx-sts
 spec:
   serviceName: "nginx-headless"
-  replicas: 4
-  #podManagementPolicy: Parallel
+  replicas: 5
   selector:
     matchLabels:
       run: nginx-sts-demo
@@ -38,7 +37,7 @@ spec:
   - metadata:
       name: www
     spec:
-      storageClassName: manual
+      storageClassName: uat
       accessModes:
         - ReadWriteOnce
       resources:
