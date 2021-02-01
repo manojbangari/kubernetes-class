@@ -3,11 +3,11 @@ kind: Job
 metadata:
   name: helloworld
 spec:
-  completions: 4
+  backoffLimit: 4
   template:
     spec:
       containers:
-      - name: nginx
-        image: nginx
-        command: ["echo", "Helloo Kube!!!"]
+      - name: busybox
+        image: busybox
+        command: ["sh", "/asd"]
       restartPolicy: Never
