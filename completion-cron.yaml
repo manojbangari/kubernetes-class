@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: helloworld
+spec:
+  completions: 4
+  template:
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        command: ["echo", "Helloo Kube!!!"]
+      restartPolicy: Never
