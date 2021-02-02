@@ -4,7 +4,7 @@ metadata:
   name: mycronjob
 spec:
    parallelism: 3
-   completions: 10
+   completions: 12
    template:
         spec:
           containers:
