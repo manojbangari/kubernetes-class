@@ -3,8 +3,8 @@ kind: Job
 metadata:
   name: mycronjob
 spec:
-   parallelism: 3
-   completions: 12
+   parallelism: 2
+   completions: 8
    template:
         spec:
           containers:
