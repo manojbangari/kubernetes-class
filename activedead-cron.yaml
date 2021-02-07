@@ -3,11 +3,11 @@ kind: Job
 metadata:
   name: helloworld
 spec:
-  backoffLimit: 4
+  activeDeadlineSeconds: 10
   template:
     spec:
       containers:
       - name: busybox
         image: busybox
-        command: ["sh", "/asd"]
+        command: ["sleep", "60"]
       restartPolicy: Never
