@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: prometheus-cont
-        image: odcicmtsmaster1:5000/prom/prometheus
+        image: prom/prometheus
         volumeMounts:
         - name: config-volume
           mountPath: /root/yaml/prom.yaml
