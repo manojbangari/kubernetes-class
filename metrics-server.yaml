@@ -91,6 +91,9 @@ spec:
       - ip: "192.168.216.233"
         hostnames:
         - "worker3"
+      - ip: "192.168.216.235"
+        hostnames:
+        - "master2"
       volumes:
       - name: tmp-dir
         emptyDir: {}
@@ -101,7 +104,6 @@ spec:
         args:
           - --cert-dir=/tmp
           - --secure-port=4443
-          - --kubelet-insecure-tls=true
         ports:
         - name: main-port
           containerPort: 4443
