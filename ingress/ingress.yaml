@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1 
+kind: Ingress
+metadata:
+   name: ui-ingress
+   annotations:
+spec:
+   rules:
+   - host: 
+     http:
+       paths:
+         - path: /ICMTS/portal
+           backend:
+             serviceName: ui-service
+             servicePort: 80
+
+
+
