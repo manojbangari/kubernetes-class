@@ -9,5 +9,5 @@ spec:
       containers:
       - name: busybox
         image: busybox
-        command: ["sh", "/asd"]
+        command: ["sh", "asd"]
       restartPolicy: Never
